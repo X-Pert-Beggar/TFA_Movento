@@ -123,12 +123,14 @@
         position: relative;
         font-size: 57px;
         font-weight: 700;
+        font-family: 'Poppins', sans-serif;
     }
     
     .sstitre {
         position: relative;
         font-size: 24px;
         font-weight: 700;
+        font-family: 'Poppins', sans-serif;
     }
     
     .titre--center {
@@ -147,16 +149,6 @@
         top: 1.5em;
         text-transform: uppercase;
         margin-bottom: 60px;
-    }
-    
-    .titre--study:before {
-        content: "";
-        width: 100%;
-        height: 2px;
-        background-color: var(--color-text);
-        display: inline-block;
-        position: absolute;
-        top: 2.2em;
     }
     
     .sstitre--center {
@@ -275,9 +267,6 @@
         .main {
             margin: 60px;
         }
-        .section--intro {
-            margin-bottom: 1000px;
-        }
         .titre {
             font-size: 80px;
         }
@@ -290,19 +279,22 @@
         .section {
             grid-template-columns: repeat(9, 1fr);
             grid-column-gap: 30px;
-            margin-top: 150px;
+            margin-top: 200px;
+        }
+        .section--study {
+            margin-top: 350px;
         }
         .desktop-start {
             grid-column-start: 1;
-            grid-column-end: 3;
+            grid-column-end: 4;
         }
         .desktop-start2 {
             grid-column-start: 2;
-            grid-column-end: 4;
+            grid-column-end: 5;
         }
         .desktop-start3 {
             grid-column-start: 3;
-            grid-column-end: 5;
+            grid-column-end: 6;
         }
         .desktop-start4 {
             grid-column-start: 2;
@@ -315,6 +307,10 @@
         .desktop-centre {
             grid-column-start: 5;
             grid-column-end: 6;
+        }
+        .desktop-full {
+            grid-column-start: 1;
+            grid-column-end: -1;
         }
         .cont__bt {
             justify-content: flex-start;
@@ -334,5 +330,22 @@
             object-fit: cover;
             z-index: -2;
             overflow: hidden;
+        }
+        .section--study__text {
+            margin-top: -150px;
+        }
+        .cont__bold {
+            margin-bottom: 400px;
+        }
+        .backgroundblue {
+            background-color: #1C30DD;
+            width: 100%;
+            height: 32em;
+            z-index: -2;
+            left: 0;
+            margin-top: -3em;
+        }
+        .balimg--text {
+            margin-top: 15em;
         }
     }
