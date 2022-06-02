@@ -2,10 +2,36 @@
     @import 'components/type';
      :root {
         --color-bg: #EEEEEE;
-        --color-bg-offset: #181818;
+        --color-bg-offset: #EEEEEE;
         --color-text: #1C30DD;
         --color-text-offset: #EEEEEE;
-        --color-primary: #000000;
+        --color-primary: #1C30DD;
+    }
+    
+    @media(prefers-color-scheme: dark) {
+         :root {
+            --color-bg: #000699;
+            --color-bg-offset: #EEEEEE;
+            --color-text: #FFF;
+            --color-text-offset: #EEEEEE;
+            --color-primary: #1C30DD;
+        }
+    }
+    
+    [data-theme='light'] {
+        --color-bg: #EEEEEE;
+        --color-bg-offset: #EEEEEE;
+        --color-text: rgb(0, 0, 0);
+        --color-text-offset: #1C30DD;
+        --color-primary: #1C30DD;
+    }
+    
+    [data-theme='dark'] {
+        --color-bg: #000699;
+        --color-bg-offset: #EEEEEE;
+        --color-text: #EEEEEE;
+        --color-text-offset: rgb(177, 177, 177);
+        --color-primary: #1C30DD;
     }
     
     body {
@@ -166,11 +192,11 @@
     .bt__bleu {
         font-size: 16px;
         font-weight: 600;
-        color: var(--color-text-offset);
+        color: var(--color-bg-offset);
         display: flex;
         width: 150px;
         height: 50px;
-        background-color: var(--color-text);
+        background-color: var(--color-primary);
         align-items: center;
         justify-content: space-around;
         border-radius: 51px;
@@ -185,7 +211,7 @@
         display: flex;
         width: 150px;
         height: 50px;
-        background-color: none;
+        background-color: var(--color-bg);
         align-items: center;
         justify-content: space-around;
         border-radius: 51px;
@@ -218,6 +244,7 @@
         width: 50px;
         height: auto;
         margin-left: 20px;
+        fill: var(--color-text);
     }
     
     .btn__dark {
@@ -251,7 +278,7 @@
     
     .backgroundblue {
         position: absolute;
-        background-color: #1C30DD;
+        background-color: var(--color-primary);
         width: 100%;
         height: 42em;
         z-index: -2;
@@ -263,6 +290,22 @@
         color: #EEEEEE;
     }
     
+    .rectangle {
+        background-color: var(--color-primary);
+        width: 250px;
+        height: 250px;
+        font-size: 24px;
+        color: #EEEEEE;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .lien {
+        transition: 0.3s;
+        color: var(--color-text);
+    }
+    
     @media (min-width: 1200px) {
         .main {
             margin: 60px;
@@ -271,10 +314,10 @@
             font-size: 80px;
         }
         .titre--center {
-            top: 1.2em;
+            top: 1em;
         }
         .sstitre--center {
-            top: 0.1em;
+            top: -0.8em;
         }
         .section {
             grid-template-columns: repeat(9, 1fr);
@@ -319,7 +362,7 @@
             margin-right: 20px;
         }
         .bt_bleu--intro {
-            top: 1em;
+            top: 0.1em;
         }
         .cont__img {
             position: absolute;
@@ -345,5 +388,69 @@
         }
         .balimg--smooth {
             border-radius: 2%;
+        }
+    }
+    
+    @media (min-width: 768px) and (max-width: 1200px) {
+        .section {
+            grid-template-columns: repeat(7, 1fr);
+            grid-column-gap: 20px;
+        }
+        .tab-left {
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        .tab-left2 {
+            grid-column-start: 2;
+            grid-column-end: 6;
+        }
+        .tab-right {
+            grid-column-start: 4;
+            grid-column-end: -1;
+        }
+        .tab-right2 {
+            grid-column-start: 6;
+            grid-column-end: -1;
+        }
+        .tab-center {
+            grid-column-start: 4;
+            grid-column-end: 4;
+        }
+        .tab-full {
+            grid-column-start: 1;
+            grid-column-end: -1;
+        }
+        .key__cont {
+            justify-content: flex-start;
+            margin-top: 100px;
+        }
+        .btn__cont {
+            justify-content: flex-start;
+        }
+        .titre {
+            font-size: 80px;
+        }
+        .balimg--intro {
+            transform: rotate(90deg);
+            top: -14em;
+        }
+        .cont__bt {
+            justify-content: flex-start;
+        }
+        .bt__blanc {
+            margin-right: 20px;
+        }
+        .cont__img {
+            position: absolute;
+            width: 100%;
+            height: 350px;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            z-index: -2;
+            overflow: hidden;
+        }
+        .backgroundblue {
+            height: 33em;
         }
     }
