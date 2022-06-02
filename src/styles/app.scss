@@ -21,8 +21,8 @@
     [data-theme='light'] {
         --color-bg: #EEEEEE;
         --color-bg-offset: #EEEEEE;
-        --color-text: rgb(0, 0, 0);
-        --color-text-offset: #1C30DD;
+        --color-text: #1C30DD;
+        --color-text-offset: #EEEEEE;
         --color-primary: #1C30DD;
     }
     
@@ -30,7 +30,7 @@
         --color-bg: #000699;
         --color-bg-offset: #EEEEEE;
         --color-text: #EEEEEE;
-        --color-text-offset: rgb(177, 177, 177);
+        --color-text-offset: #EEEEEE;
         --color-primary: #1C30DD;
     }
     
@@ -298,6 +298,16 @@
         color: #EEEEEE;
         display: flex;
         align-items: center;
+        justify-content: center;
+    }
+    
+    .cont__phone {
+        display: flex;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        z-index: -2;
+        overflow: hidden;
         justify-content: center;
     }
     
