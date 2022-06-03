@@ -437,6 +437,11 @@
             height: 80px;
             margin-top: 40px;
             margin-right: 20px;
+            transition: 0.3s;
+        }
+        .svg:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
         }
         .cont__svg {
             flex-direction: row;
