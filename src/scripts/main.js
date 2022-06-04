@@ -1,3 +1,5 @@
+import { gsap } from "gsap";
+
 console.info('Hello world');
 
 const darkTheme = document.querySelector(".btn__dark");
