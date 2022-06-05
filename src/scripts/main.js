@@ -3,23 +3,56 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 console.info('Hello world');
 gsap.from(".titre--center", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
 gsap.from(".sstitre--center", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
 gsap.from(".bt_bleu--intro", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
 gsap.from(".balimg--intro", { duration: 1, y: 50, opacity: 0 });
+gsap.from(".section--study", { duration: 1, y: 50, opacity: 0 });
 
-gsap.from(".cont__phone", {
+gsap.from(".cont__phonea", {
     opacity: 0,
+    y: 100,
     scrollTrigger: {
-        trigger: ".cont__phone",
+        trigger: ".cont__phonea",
         start: "top center",
         markers: true,
 
     },
 });
 
+gsap.from(".cont__phoneb", {
+    opacity: 0,
+    y: 100,
+    scrollTrigger: {
+        trigger: ".cont__phoneb",
+        start: "top center",
+        markers: true,
+
+    },
+});
+
+gsap.from(".section--end", {
+    opacity: 0,
+    y: 100,
+    scrollTrigger: {
+        trigger: ".section--end",
+        start: "top bottom",
+        markers: true,
+
+    },
+});
+
+gsap.from(".section--study__text", {
+    opacity: 0,
+    y: 100,
+    scrollTrigger: {
+        trigger: ".section--study__text",
+        start: "top center",
+        markers: true,
+
+    },
+});
 const darkTheme = document.querySelector(".btn__dark");
 
 //Gérer le data-theme du body
