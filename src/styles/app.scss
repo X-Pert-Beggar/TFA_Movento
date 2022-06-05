@@ -202,6 +202,7 @@
         -webkit-transition: 0.5s;
         transition: 0.5s;
         cursor: pointer;
+        margin-right: 1em;
     }
     
     .btn__dark:hover {
@@ -305,10 +306,6 @@
     
     .lien--actif {
         opacity: 0.8;
-    }
-    
-    .btn__dark {
-        margin-right: 20px;
     }
     
     .line {

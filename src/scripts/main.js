@@ -1,6 +1,24 @@
 import { gsap } from "gsap";
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 console.info('Hello world');
+gsap.from(".titre--center", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
+gsap.from(".sstitre--center", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
+gsap.from(".bt_bleu--intro", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
+gsap.from(".balimg--intro", { duration: 1, y: 50, opacity: 0 });
+
+gsap.from(".cont__phone", {
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".cont__phone",
+        start: "top center",
+        markers: true,
+
+    },
+});
 
 const darkTheme = document.querySelector(".btn__dark");
 
