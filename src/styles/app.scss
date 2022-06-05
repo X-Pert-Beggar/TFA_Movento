@@ -104,10 +104,6 @@
         margin-top: 150px;
     }
     
-    .section--intro {
-        margin-bottom: 500px;
-    }
-    
     .section--study__text {
         margin-top: -350px;
     }
@@ -153,24 +149,14 @@
         max-width: 100%;
     }
     
-    .balimg--intro {
-        -webkit-filter: brightness(75%);
-        filter: brightness(75%);
-        position: absolute;
-        top: 2em;
-        left: 0;
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        z-index: -2;
-    }
-    
     .balimg--study {
         -webkit-filter: brightness(100%);
         filter: brightness(100%);
     }
     
-    .balimg--intro__tab {
-        display: none;
+    .bold--intro {
+        font-size: 25px;
+        text-align: center;
     }
     
     .titre {
@@ -178,6 +164,7 @@
         font-size: 57px;
         font-weight: 700;
         font-family: "Poppins", sans-serif;
+        line-height: 1;
     }
     
     .sstitre {
@@ -187,10 +174,14 @@
         font-family: "Poppins", sans-serif;
     }
     
-    .titre--center {
-        color: var(--color-text-offset);
+    .titre--intro {
         text-align: center;
-        top: 0.5em;
+        font-size: 45px;
+    }
+    
+    .sstitre--intro {
+        top: -1em;
+        text-align: center;
     }
     
     .titre--study {
@@ -419,18 +410,28 @@
         margin-top: -20px;
     }
     
+    .cont__phone--block {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .cont__vid {
+        width: 100%;
+        height: 20em;
+        display: flex;
+        background-color: #444;
+    }
+    
+    .balimg--vid {
+        background-size: contain;
+    }
+    
     @media (min-width: 1200px) {
         .main {
             margin: 60px;
         }
         .titre {
             font-size: 80px;
-        }
-        .titre--center {
-            top: 1em;
-        }
-        .sstitre--center {
-            top: -0.8em;
         }
         .section {
             grid-template-columns: repeat(9, 1fr);
@@ -447,6 +448,10 @@
             grid-column-start: 1;
             grid-column-end: 4;
         }
+        .desktop-titre {
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
         .desktop-start2 {
             grid-column-start: 2;
             grid-column-end: 5;
@@ -461,6 +466,10 @@
         }
         .desktop-startleft {
             grid-column-start: 5;
+            grid-column-end: -1;
+        }
+        .desktop-startleft2 {
+            grid-column-start: 6;
             grid-column-end: -1;
         }
         .desktop-centre {
@@ -539,6 +548,11 @@
         transform: scale(1.05);
         -webkit-transition: 0.3s;
         transition: 0.3s;
+    }
+    
+    .balimg--intro {
+        margin-top: -6em;
+        width: 100%;
     }
     
     .cont__svg {
