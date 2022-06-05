@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 console.info('Hello world');
@@ -9,6 +10,7 @@ gsap.from(".sstitre--center", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
 gsap.from(".bt_bleu--intro", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
 gsap.from(".balimg--intro", { duration: 1, y: 50, opacity: 0 });
 gsap.from(".section--study", { duration: 1, y: 50, opacity: 0 });
+gsap.from(".section__start", { duration: 1, y: 50, opacity: 0 });
 
 gsap.from(".cont__phonea", {
     opacity: 0,
@@ -16,7 +18,7 @@ gsap.from(".cont__phonea", {
     scrollTrigger: {
         trigger: ".cont__phonea",
         start: "top center",
-        markers: true,
+
 
     },
 });
@@ -27,7 +29,7 @@ gsap.from(".cont__phoneb", {
     scrollTrigger: {
         trigger: ".cont__phoneb",
         start: "top center",
-        markers: true,
+
 
     },
 });
@@ -38,7 +40,7 @@ gsap.from(".section--end", {
     scrollTrigger: {
         trigger: ".section--end",
         start: "top bottom",
-        markers: true,
+
 
     },
 });
@@ -49,10 +51,33 @@ gsap.from(".section--study__text", {
     scrollTrigger: {
         trigger: ".section--study__text",
         start: "top center",
-        markers: true,
+
 
     },
 });
+
+gsap.from(".block__studya", {
+    opacity: 0,
+    scrollTrigger: {
+        trigger: ".block__studya",
+        start: "top center",
+
+
+    },
+});
+
+gsap.from(".block__studyb", {
+    opacity: 0,
+    y: 100,
+    scrollTrigger: {
+        trigger: ".block__studyb",
+        start: "top center",
+
+
+    },
+});
+
+
 const darkTheme = document.querySelector(".btn__dark");
 
 //Gérer le data-theme du body
