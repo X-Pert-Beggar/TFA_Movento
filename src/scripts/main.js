@@ -5,7 +5,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 console.info('Hello world');
-gsap.from(".bt", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
 gsap.from(".section--study", { duration: 1, y: 50, opacity: 0 });
 gsap.from(".section__start", { duration: 1, y: 50, opacity: 0 });
 
