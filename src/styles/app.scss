@@ -12,9 +12,9 @@
      :root {
         --color-bg: #EEEEEE;
         --color-bg-offset: #EEEEEE;
-        --color-text: #1C30DD;
+        --color-text: #2C49FF;
         --color-text-offset: #EEEEEE;
-        --color-primary: #1C30DD;
+        --color-primary: #2C49FF;
     }
     
     @media (prefers-color-scheme: dark) {
@@ -23,16 +23,16 @@
             --color-bg-offset: #EEEEEE;
             --color-text: #FFF;
             --color-text-offset: #EEEEEE;
-            --color-primary: #1C30DD;
+            --color-primary: #2C49FF;
         }
     }
     
     [data-theme=light] {
         --color-bg: #EEEEEE;
         --color-bg-offset: #EEEEEE;
-        --color-text: #1C30DD;
+        --color-text: #2C49FF;
         --color-text-offset: #EEEEEE;
-        --color-primary: #1C30DD;
+        --color-primary: #2C49FF;
     }
     
     [data-theme=dark] {
@@ -40,7 +40,7 @@
         --color-bg-offset: #EEEEEE;
         --color-text: #EEEEEE;
         --color-text-offset: #EEEEEE;
-        --color-primary: #1C30DD;
+        --color-primary: #2C49FF;
     }
     
     .overflow {
@@ -96,6 +96,10 @@
         margin: 30px;
     }
     
+    .cont__intro {
+        display: flex;
+    }
+    
     .section {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -105,7 +109,11 @@
     }
     
     .section--study__text {
-        margin-top: -350px;
+        margin-top: 100px;
+    }
+    
+    .section--study {
+        margin-top: 15em;
     }
     
     .section--end {
@@ -149,14 +157,8 @@
         max-width: 100%;
     }
     
-    .balimg--study {
-        -webkit-filter: brightness(100%);
-        filter: brightness(100%);
-    }
-    
-    .bold--intro {
-        font-size: 25px;
-        text-align: center;
+    .balimg--full {
+        position: absolute;
     }
     
     .titre {
@@ -384,7 +386,7 @@
         margin-bottom: 80px;
         overflow: hidden;
         z-index: -2;
-        color: #1C30DD;
+        color: #2C49FF;
     }
     
     .cont__phone__text {
@@ -415,15 +417,23 @@
         justify-content: center;
     }
     
-    .cont__vid {
-        width: 100%;
-        height: 20em;
-        display: flex;
-        background-color: #444;
+    .cont__img {
+        margin: -2em;
+        overflow: hidden;
     }
     
-    .balimg--vid {
-        background-size: contain;
+    .balimg--radius {
+        border-radius: 46px;
+    }
+    
+    .bold--intro {
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .balimg--intro {
+        margin-top: 0em;
+        margin-bottom: 0em;
     }
     
     @media (min-width: 1200px) {
@@ -438,11 +448,14 @@
             grid-column-gap: 30px;
             margin-top: 200px;
         }
+        .section--intro {
+            margin-bottom: 30%;
+        }
         .section--study {
             margin-top: 350px;
         }
         .section--phone__intro {
-            margin-top: 40em;
+            margin-top: 20em;
         }
         .desktop-start {
             grid-column-start: 1;
@@ -460,10 +473,6 @@
             grid-column-start: 3;
             grid-column-end: 8;
         }
-        .desktop-start4 {
-            grid-column-start: 2;
-            grid-column-end: 6;
-        }
         .desktop-startleft {
             grid-column-start: 5;
             grid-column-end: -1;
@@ -473,8 +482,8 @@
             grid-column-end: -1;
         }
         .desktop-centre {
-            grid-column-start: 5;
-            grid-column-end: 6;
+            grid-column-start: 2;
+            grid-column-end: 9;
         }
         .desktop-full {
             grid-column-start: 1;
@@ -492,12 +501,17 @@
             top: 0.1em;
         }
         .cont__img {
+            width: 100%;
+            height: 500px;
+            margin: 0em;
+            transform: scale(1.1);
+        }
+        .cont__img--study {
             position: absolute;
             width: 100%;
             height: 500px;
             top: 0;
             left: 0;
-            -o-object-fit: cover;
             object-fit: cover;
             z-index: -2;
             overflow: hidden;
@@ -529,37 +543,43 @@
             transform: scale(1);
             width: 85%;
         }
-    }
-    
-    .balimg--smooth {
-        border-radius: 2%;
-    }
-    
-    .svg {
-        height: 80px;
-        margin-top: 40px;
-        margin-right: 20px;
-        -webkit-transition: 0.3s;
-        transition: 0.3s;
-    }
-    
-    .svg:hover {
-        -webkit-transform: scale(1.05);
-        transform: scale(1.05);
-        -webkit-transition: 0.3s;
-        transition: 0.3s;
-    }
-    
-    .balimg--intro {
-        margin-top: -6em;
-        width: 100%;
-    }
-    
-    .cont__svg {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
+        .balimg--smooth {
+            border-radius: 2%;
+        }
+        .svg {
+            height: 80px;
+            margin-top: 40px;
+            margin-right: 20px;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+        }
+        .svg:hover {
+            -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+        }
+        .cont__svg {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+        }
+        .titre--intro {
+            text-align: left;
+            font-size: 80px;
+        }
+        .sstitre--intro {
+            top: -2em;
+            text-align: left;
+        }
+        .balimg--intro {
+            margin-top: -6em;
+            margin-bottom: -40em;
+        }
+        .bold--intro {
+            font-size: 66px;
+        }
     }
     
     @media (min-width: 768px) and (max-width: 1200px) {
@@ -605,16 +625,6 @@
         .titre {
             font-size: 80px;
         }
-        .balimg--intro {
-            display: none;
-        }
-        .balimg--intro__tab {
-            top: 11.5em;
-            display: block;
-        }
-        .balimg--study {
-            display: block;
-        }
         .cont__bt {
             -webkit-box-pack: start;
             -ms-flex-pack: start;
@@ -623,7 +633,7 @@
         .bt__blanc {
             margin-right: 20px;
         }
-        .cont__img {
+        .cont__img--study {
             position: absolute;
             width: 100%;
             height: 350px;
