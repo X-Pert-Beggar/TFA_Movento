@@ -435,6 +435,15 @@
         margin-bottom: 0em;
     }
     
+    .backgroundblue--img {
+        overflow: hidden;
+        height: 25%;
+    }
+    
+    .section--phone__introdes2 {
+        margin-top: 20em;
+    }
+    
     @media (min-width: 1200px) {
         .main {
             margin: 60px;
@@ -584,6 +593,7 @@
         }
         .backgroundblue--img {
             overflow: hidden;
+            height: 58%;
         }
     }
     
