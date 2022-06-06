@@ -6,24 +6,38 @@ gsap.registerPlugin(ScrollTrigger);
 
 console.info('Hello world');
 gsap.from(".bt", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
-gsap.from(".balimg--intro", { duration: 1, y: 50, opacity: 0 });
 gsap.from(".section--study", { duration: 1, y: 50, opacity: 0 });
 gsap.from(".section__start", { duration: 1, y: 50, opacity: 0 });
-gsap.from(".titre--intro", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
-gsap.from(".sstitre--intro", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
+
+
 
 
 
 gsap.from(".bold--intro", {
     opacity: 0,
     y: 100,
+    duration: 1,
     scrollTrigger: {
         trigger: ".bold--intro",
-        start: "top center",
+        start: "top bottom",
 
 
     },
 });
+
+gsap.to(".balimg--intro", {
+
+    opacity: 0,
+    delay: 0.2,
+    scrollTrigger: {
+        trigger: ".backgroundblue--intro__text",
+        start: "center bottom",
+        end: "bottom bottom",
+        scrub: true
+
+    },
+});
+
 
 gsap.from(".section--phone__intro", {
     opacity: 0,
