@@ -232,7 +232,7 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        width: 150px;
+        width: 180px;
         height: 50px;
         -webkit-box-align: center;
         -ms-flex-align: center;
@@ -243,18 +243,10 @@
         text-transform: uppercase;
         border: none;
         cursor: pointer;
-    }
-    
-    .bt--bleu {
+        text-align: center;
+        top: -1em;
         color: var(--color-bg-offset);
         background-color: var(--color-primary);
-    }
-    
-    .bt--blanc {
-        color: var(--color-text);
-        background-color: var(--color-bg);
-        border: solid var(--color-text) 2px;
-        margin-right: 1em;
     }
     
     .bt:hover {
@@ -262,14 +254,6 @@
         transition: 0.1s;
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
-    }
-    
-    .bt_bleu--intro {
-        position: relative;
-        top: -1em;
-        text-align: center;
-        width: 180px;
-        height: 50px;
     }
     
     .footer {
@@ -407,10 +391,6 @@
         width: 220px;
     }
     
-    .svg__store {
-        margin-top: -20px;
-    }
-    
     .cont__phone--block {
         display: flex;
         justify-content: center;
@@ -442,6 +422,18 @@
     
     .section--phone__introdes2 {
         margin-top: 20em;
+    }
+    
+    .cont__phone--block2 {
+        margin-top: 4em;
+    }
+    
+    .balimg--margintop {
+        margin-top: 2em;
+    }
+    
+    .none {
+        display: none;
     }
     
     @media (min-width: 1200px) {
@@ -551,9 +543,6 @@
             transform: scale(1);
             width: 85%;
         }
-        .balimg--smooth {
-            border-radius: 2%;
-        }
         .svg {
             height: 80px;
             margin-top: 40px;
@@ -594,6 +583,12 @@
         .backgroundblue--img {
             overflow: hidden;
             height: 60%;
+        }
+        .cont__phone--block {
+            padding: 40px;
+        }
+        .cont__phone--block2 {
+            margin-top: -15em;
         }
     }
     
@@ -693,7 +688,11 @@
         .svg {
             width: 220px;
         }
-        .svg__store {
-            margin-top: -20px;
+        .backgroundblue--img {
+            overflow: hidden;
+            height: 25%;
+        }
+        .cont__phone--block2 {
+            margin-top: 5em;
         }
     }

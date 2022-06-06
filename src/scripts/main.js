@@ -5,12 +5,38 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 console.info('Hello world');
-gsap.from(".titre--center", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
-gsap.from(".sstitre--center", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
-gsap.from(".bt_bleu--intro", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
+gsap.from(".bt", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
 gsap.from(".balimg--intro", { duration: 1, y: 50, opacity: 0 });
 gsap.from(".section--study", { duration: 1, y: 50, opacity: 0 });
 gsap.from(".section__start", { duration: 1, y: 50, opacity: 0 });
+gsap.from(".titre--intro", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
+gsap.from(".sstitre--intro", { duration: 1, x: 50, opacity: 0, delay: 0.5 });
+
+
+
+gsap.from(".bold--intro", {
+    opacity: 0,
+    y: 100,
+    scrollTrigger: {
+        trigger: ".bold--intro",
+        start: "top center",
+
+
+    },
+});
+
+gsap.from(".section--phone__intro", {
+    opacity: 0,
+    y: 100,
+    scrollTrigger: {
+        trigger: ".section--phone__intro",
+        start: "top center",
+
+
+    },
+});
+
+
 
 gsap.from(".cont__phonea", {
     opacity: 0,
@@ -80,7 +106,7 @@ gsap.from(".block__studyb", {
 
 const darkTheme = document.querySelector(".btn__dark");
 
-//Gérer le data-theme du body
+
 darkTheme.addEventListener("click", function() {
     if (document.body.dataset.theme === "dark") {
         light();
@@ -91,10 +117,10 @@ darkTheme.addEventListener("click", function() {
     }
 });
 
-//Est ce que l"utilisateur veut un theme dark?
+
 const userDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-//Est ce que l'utilisateur a déjà indiqué une préférence sur notre site?
+
 let theme = localStorage.getItem('theme');
 if ((!theme && userDark) || (theme === "dark")) {
     dark();
@@ -102,11 +128,11 @@ if ((!theme && userDark) || (theme === "dark")) {
     light();
 }
 
-//function pour le dark
+
 function dark() {
     document.body.setAttribute("data-theme", "dark");
 }
-//function pour le light
+
 function light() {
     document.body.setAttribute("data-theme", "light");
 }
